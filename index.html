@@ -12,8 +12,8 @@
 </head>
 <body>
     <header>
-        <h1><a href="/">Emily Thon</a></h1>
         <nav>
+            <h1><a href="/">Emily Thon</a></h1>
             <ul>
                 <li>
                     <a href="#about-me">About Me</a>
@@ -28,15 +28,29 @@
         </nav>
     </header>
 
-    <div class="hero"></div>
-    <section class="about-me">
+    <section class="hero">
+        <h1>Web Design and Development</h1>
+    </section>
+
+    <section class="about-me" id="about-me">
         <h1>About Me</h1>
-        <p>I am a web designer and developer based in Minneapolis, MN</p>
+        <img src="./assets/images/me.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi facere sed sunt eum excepturi vel cumque neque! Ratione nesciunt tempora obcaecati odit aliquid qui iure expedita? Perspiciatis nihil necessitatibus enim.</p>
+
     </section>
-    <section class="portfolio">
+
+    <section class="portfolio" id="portfolio">
         <h1>Portfolio</h1>
+        <div class="images">
+        <a class = "portfolio1" href="https://placeholder.com"> <img src="https://via.placeholder.com/850x350" alt=""></a>
+        <a class = "portfolio2" href="https://placeholder.com"> <img src="https://via.placeholder.com/350x350" alt=""></a>
+        <a class = "portfolio3" href="https://placeholder.com"> <img src="https://via.placeholder.com/350x250" alt=""></a>
+        <a class = "portfolio4" href="https://placeholder.com"> <img src="https://via.placeholder.com/850x250" alt=""></a>
+        </div>
     </section>
-    <section class="contact">
+
+    <section class="contact" id="contact">
+        <div class="form-container">
         <h1>Contact</h1>
         <form action="input">
             <label for="name">Name</label>
@@ -44,13 +58,32 @@
             <label for="email">Email</label>
             <input type="email">
             <label for="message">Message</label>
-            <input type="text" name="message">
-            <button>Submit</button>
+            <input type="text" name="message" class="message">
+            <button type="submit">Submit</button>
 
         </form>
+    </div>
     </section>
 
     <footer>
+        <h4>Emily Thon &copy; 2021</h4>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="" alt="linkdin-social-media">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="" alt="twitter-social-media">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="" alt="instagram-social-media">
+                </a>
+            </li>
+        </ul>
 
     </footer>
     
