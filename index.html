@@ -1,91 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emily Thon Web Dev</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
+      <div class="container">
+        <div class="header--logo"><a href="/">Emily Thon</a></div>
         <nav>
-            <h1><a href="/">Emily Thon</a></h1>
-            <ul>
-                <li>
-                    <a href="#about-me">About Me</a>
-               </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#about-me">About Me</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
         </nav>
+      </div>
     </header>
 
     <section class="hero">
+      <div class="container">
         <h1>Web Design and Development</h1>
+      </div>
     </section>
 
     <section class="about-me" id="about-me">
-        <h1>About Me</h1>
-        <img src="./assets/images/me.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi facere sed sunt eum excepturi vel cumque neque! Ratione nesciunt tempora obcaecati odit aliquid qui iure expedita? Perspiciatis nihil necessitatibus enim.</p>
+      <div class="container">
+        <h2>About Me</h2>
 
+        <div class="flex">
+          <div class="flex--image">
+            <img src="./assets/images/me.jpg" alt="" />
+          </div>
+          <div class="flex--content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              facere sed sunt eum excepturi vel cumque neque! Ratione nesciunt
+              tempora obcaecati odit aliquid qui iure expedita? Perspiciatis
+              nihil necessitatibus enim.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="portfolio" id="portfolio">
-        <h1>Portfolio</h1>
-        <div class="images">
-        <a class = "portfolio1" href="https://placeholder.com"> <img src="https://via.placeholder.com/850x350" alt=""></a>
-        <a class = "portfolio2" href="https://placeholder.com"> <img src="https://via.placeholder.com/350x350" alt=""></a>
-        <a class = "portfolio3" href="https://placeholder.com"> <img src="https://via.placeholder.com/350x250" alt=""></a> 
-        <a class = "portfolio4" href="https://placeholder.com"> <img src="https://via.placeholder.com/850x250" alt=""></a>
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio--grid">
+          <a
+            class="grid--item grid--item--medium"
+            href="https://placeholder.com"
+          >
+            <img src="https://via.placeholder.com/850x350" alt="" />
+            <div class="portfolio--info">
+              <div class="portfolio--info--title">Run Buddy</div>
+              <div class="portfolio--info--lang">HTML/CSS</div>
+            </div>
+          </a>
+          <a class="grid--item" href="https://placeholder.com">
+            <img src="https://via.placeholder.com/350x350" alt="" />
+            <div class="portfolio--info">
+              <div class="portfolio--info--title">Password Generator</div>
+              <div class="portfolio--info--lang">Javascript</div>
+            </div>
+          </a>
+          <a class="grid--item" href="https://placeholder.com">
+            <img src="https://via.placeholder.com/350x250" alt="" />
+            <div class="portfolio--info">
+              <div class="portfolio--info--title">README Generator</div>
+              <div class="portfolio--info--lang">node.js</div>
+            </div>
+          </a>
+          <a
+            class="grid--item grid--item--medium"
+            href="https://placeholder.com"
+          >
+            <img src="https://via.placeholder.com/850x250" alt="" />
+            <div class="portfolio--info">
+              <div class="portfolio--info--title">Employee Tracker</div>
+              <div class="portfolio--info--lang">SQL</div>
+            </div>
+          </a>
         </div>
+      </div>
     </section>
 
     <section class="contact" id="contact">
-        <div class="form-container">
-        <h1>Contact</h1>
+      <div class="container container--contact">
+        <h2>Contact</h2>
         <form action="input">
+          <div class="form-item">
             <label for="name">Name</label>
-            <input type="name">
+            <input type="name" />
+          </div>
+          <div class="form-item">
             <label for="email">Email</label>
-            <input type="email">
+            <input type="email" />
+          </div>
+          <div class="form-item">
             <label for="message">Message</label>
-            <input type="text" name="message" class="message">
-            <button type="submit">Submit</button>
-
+            <input type="text" name="message" class="message" />
+          </div>
+          <button type="submit">Submit</button>
         </form>
-    </div>
+      </div>
     </section>
 
     <footer>
-        <h4>Emily Thon &copy; 2021</h4>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="/assets/images/iconmonstr-linkedin-1.svg" alt="linkdin-social-media">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/assets/images/iconmonstr-twitter-1.svg" alt="twitter-social-media">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/assets/images/iconmonstr-instagram-11.svg" alt="instagram-social-media">
-                </a>
-            </li>
-        </ul>
-
+      <h4>Emily Thon &copy; 2021</h4>
+      <ul>
+        <li>
+          <a href="#">
+            <img
+              src="/assets/images/iconmonstr-linkedin-1.svg"
+              alt="linkdin-social-media"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="/assets/images/iconmonstr-twitter-1.svg"
+              alt="twitter-social-media"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="/assets/images/iconmonstr-instagram-11.svg"
+              alt="instagram-social-media"
+            />
+          </a>
+        </li>
+      </ul>
     </footer>
-    
-</body>
+  </body>
 </html>

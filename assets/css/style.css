@@ -12,21 +12,49 @@
     --tertiary-color: #727072;
   }
 
-  a{
-      text-decoration: none;
-      color: var(--primary-color);
-  }
-  
   body {
       font-family:'Karla', sans-serif;
   }
 
-  h1 {
+  .container{
+      position: relative;
+      /* max-width:1800px; */
+      /* margin: 0 auto; */
+  }
+
+  h1, h2, .header--logo {
       font-size: 3rem;
       text-align: center;
       padding: 15px;
       text-shadow: 2px 2px #000;
   }
+
+  a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.flex{
+    max-width: 80%;
+    display: flex;
+
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.flex--image{
+    width:55%;
+}
+.flex--content{
+    width:45%;
+}
+
 
   /* End Universal Styles */
 
@@ -35,16 +63,18 @@
   header {
       background: #104547;
       color: var(--primary-color);
-      display: flex;
-      flex-wrap: wrap;
+  }
+  header .container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
   }
 
   header nav {
-      min-height: 10vh;
-      width: 90%;
-      margin: auto;
+      height: 80px;
+      padding: 0 30px;
+      max-width: 1100px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
   }
@@ -52,8 +82,9 @@
   header nav ul{
     list-style: none;
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
     font-size: 2rem;
   }
 
@@ -92,27 +123,9 @@
 .about-me {
     background-image: url("/assets/images/background.jpg");
     background-size: cover;
-    height: 100vh;
     color: var(--secondary-color);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 50px;
 
-}
-
-.about-me h1 {
-    width: 100%;
-}
-
-.about-me p {
-    width: 45%;
-    margin: 10px;
-}
-
-.about-me img{
-    width: 500px;
-    height: 500px;
-    margin: 10px;
 }
 
 
@@ -123,6 +136,7 @@
   /*Portfolio Section*/
   .portfolio {
     background: var(--secondary-color);
+    padding: 20px;
   }
 
   .portfolio h1{
@@ -134,57 +148,51 @@
       width: 100%;
   }
 
-  .images {
+  .portfolio--grid {
       display: grid;
-      min-height: 100vh;
+      flex-wrap: wrap;
       grid-template-columns: repeat(3, 1fr);
       text-align: center;
-
+      gap: 20px;
   }
 
-  .text-block {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      background-color: black;
-      color: white;
-      padding-left: 20px;
-      padding-right: 20px;
+.portfolio--grid .grid--item--large {
+    grid-column-end: span 3;
+}
 
-  }
+.portfolio--grid .grid--item--medium {
+   grid-column-end: span 2;
+}
 
-
-  .portfolio1 {
-      grid-column:1/3 ;
+  .portfolio--grid a {
+      display: flex;
       position: relative;
+      height: 30vw;
+      min-height: 150px;
+      align-items: flex-end;
   }
 
-  .text-block1 {
+  .portfolio--grid a img {
       position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
   }
 
-  .portfolio2 {
-    grid-column: 3/4;
-    position: relative;
+  .portfolio--info{ 
+      z-index: 10;
+      position: relative;
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+      margin: 10px 0;
+      padding: 20px;
+     text-align: left;
+
   }
 
-  .text-block2 {
-      position: absolute;
-  }
-
-  .portfolio3 {
-      grid-column: 1/2;
-  }
-
-  .portfolio4 {
-      grid-column: 2/4;
-  }
-
-  .images a {
-      margin: 20px;
-  }
-
-  .portfolio a:hover{
+  .portfolio a:hover img{
       opacity: 20%;
   }
 
@@ -199,45 +207,41 @@
       background: url(/assets/images/image-3.jpg);
       background-position: center;
       background-size: cover;
-      height: 100vh;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      padding: 30px 0;
   }
 
-  .contact h1 {
-      width: 100%;
-  }
 
-  .form-container {
+
+  .container--contact {
       background: var(--tertiary-color);
       color: var(--primary-color);
       text-align: center;
       width: 50%;
+      margin:  auto;
+      padding: 30px;
       border: solid var(--secondary-color);
       border-radius: 10px;
       opacity: 97%;
   }
 
-.form-container label {
+.container--contact label {
     display: block;
     margin: 20px;
     font-size: 1.5rem;
 }
 
-  .form-container input {
+  .container--contact input {
       padding: 1rem;
       width: 100%;
 
   }
 
-.message {
+.container--contact .message {
     height: 10rem;
 }
 
 
-  .form-container button {
+  .container--contact button {
       padding: 1rem 8rem;
       background: var(--primary-color);
       color: var(--secondary-color);
@@ -275,9 +279,19 @@ footer ul {
     list-style: none;
 }
 
+/*Media Queries*/
+
 @media screen and (max-width: 850px) {
+    /* Global */
+    .flex {
+        flex-wrap: wrap;
+    }
+    .flex--image, .flex--content {
+        width: 100%;
+    }
 
     /*navigation */
+
 nav a {
     font-size: 1.5rem;
 }
@@ -296,18 +310,14 @@ nav h1 a{
 }
 
 /*portfolio */
-.images {
+.portfolio--grid {
     display:flex;
     flex-direction: column;
   }
 
   /*contact */
 
-  .contact {
-    height: 100vh;
-}
-
-.form-container{
+.container--contact {
     width: 80%;
 }
 
@@ -316,16 +326,18 @@ nav h1 a{
 
 @media screen and (max-width: 640px){
 /*navigation*/
-    nav h1 a{
+
+.header--logo {
     font-size: 50px;
+    width: 100%
 }
 
-nav h1 {
-    width: 100%;
+nav {
+    margin:  auto;
 }
 
 nav ul li{
-    margin:5px 50px;
+    margin:5px 0px;
 }
 
 nav ul li a {
