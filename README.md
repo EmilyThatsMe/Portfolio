@@ -4,8 +4,8 @@
 Website featuring the web development portfolio of Emily Thon
 
 ## Built With
--HTML
--CSS
+- HTML
+- CSS
 
 ## Website
 https://emilythatsme.github.io/Portfolio/
