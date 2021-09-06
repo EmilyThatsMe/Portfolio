@@ -121,7 +121,7 @@ img{
   /* about me section */
 
 .about-me {
-    background-image: url("assets/images/background.jpg");
+    background-image: url("./assets/images/background.jpg");
     background-size: cover;
     color: var(--secondary-color);
     padding: 50px;
@@ -204,7 +204,7 @@ img{
 
   .contact {
       color: var(--secondary-color);
-      background: url(assets/images/image-3.jpg);
+      background: url(./assets/images/image-3.jpg);
       background-position: center;
       background-size: cover;
       padding: 30px 0;
